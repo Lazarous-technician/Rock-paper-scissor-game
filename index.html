@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game</title>
+    <script src="src/css/tailwind.js"></script>
+  </head>
+  <body class="bg-[#0d1117]">
+    <div
+      class="bg-[#161b22]  w-[400px]  absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 rounded-[10px] "
+    >
+      <h1 class="text-center text-white mt-10 font-semibold text-[22px]">
+        Rock Paper Scissor
+      </h1>
+
+      <div class="flex justify-center mt-10 mb-10">
+        <button
+          class="w-20 h-20 rounded-[50%] me-[20px]"
+          onclick="playerMove('rock')"
+        >
+          <img src="src/img/rock-emoji.png" />
+        </button>
+        <button
+          class="w-20 h-20 rounded-[50%] me-[20px] hover:shadow-2xl"
+          onclick="playerMove('paper')"
+        >
+          <img src="src/img/paper-emoji.png" alt="" />
+        </button>
+        <button
+          class="w-20 h-20 rounded-[50%]"
+          onclick="playerMove('scissors')"
+        >
+          <img src="src/img/scissors-emoji.png" alt="" />
+        </button>
+      </div>
+
+      <div class="text-center mb-10">
+        <p id="move" class="text-white flex justify-center items-center"></p>
+        <p id="computer" class="text-white"></p>
+        <p id="result" class="text-white text-[34px] mt-4"></p>
+        <p id="scores" class="text-white mt-4"></p>
+
+        <button
+          class="bg-yellow-600 p-[6px] px-[30px] rounded-[10px] mt-9 text-white font-bold"
+         onclick="resetsScore()"> 
+          Reset
+        </button>
+        <p class="mt-2 text-green-500 " id="resetMessage"></p>
+      </div>
+
+      <p class="mt-20 text-white text-center mb-8 text-[14px]">
+        Fibernov Technologies
+      </p>
+    </div>
+
+    <script src="src/js/main.js"></script>
+  </body>
+</html>
